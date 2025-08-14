@@ -3,6 +3,54 @@
  The problem asks for two numbers that add up to a target value. Instead of checking every possible pair (which is slow), we can store the numbers we’ve already seen in a dictionary for quick lookups. This way, as we go through the list, we can instantly check if the
 complement of the current number has been seen before.
 
+
+
+## Problem Statement
+
+Given an array of integers `nums` and an integer `target`, return the **indices** of the two numbers such that they add up to `target`.
+
+You may assume that:
+- Each input will have exactly **one** solution.
+- You may not use the same element twice.
+- The answer can be returned in any order.
+
+---
+
+### Examples
+
+**Example 1**
+
+ - Input: nums = [2,7,11,15], target = 9
+ 
+ - Output: [0,1]
+ 
+ - Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+**Example 2**
+
+ - Input: nums = [3,2,4], target = 6
+ 
+ - Output: [1,2]
+
+**Example 3**
+
+ - Input: nums = [3,3], target = 6
+ 
+ - Output: [0,1]
+  
+### Constraints
+- `2 <= nums.length <= 10^4`
+- `-10^9 <= nums[i] <= 10^9`
+- `-10^9 <= target <= 10^9`
+- Only **one valid answer** exists.
+
+---
+
+### Follow-up
+Can you design an algorithm with time complexity **better than O(n²)**?
+
+---
+
 # Approach
 <!-- Describe your approach to solving the problem. -->
 1. Create an empty dictionary to map numbers to their indices.
